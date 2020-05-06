@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,7 +19,7 @@ import com.rbs.casestudy.transferapi.repo.TransactionRepository;
  *
  */
 @Component
-//@Profile("test-data")
+@Profile("test-data")
 public class InitializeModel implements CommandLineRunner {
 
     @Autowired AccountRepository ar;
