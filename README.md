@@ -29,7 +29,7 @@
 ### Examples
 * Create an account:  
 
-    `curl -H "Content-Type: application/json" --data '{ "accountNumber":"myNewAccount", "openingBalance": 10.11 }' localhost:8080/accounts -v'`
+    `curl -H "Content-Type: application/json" --data '{ "accountNumber":"myNewAccount", "openingBalance": 10.11 }' localhost:8080/accounts -v 
     
 * Initiate a transfer: 
 
