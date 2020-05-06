@@ -8,7 +8,7 @@
   or
   -  build the jar file with `mvn clean package` which will also run the tests and package the jar
   -  run the jar file `java -jar target/transfer-api.jar`
-* the app is an executable Spring Bood jar and will run by default on http://localhost:8080 but that is configurable in the usual way
+* the app is an executable Spring Boot jar and will run by default on http://localhost:8080 but that is configurable in the usual way
 
 ## API
 
