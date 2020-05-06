@@ -27,11 +27,14 @@
 `POST /transfer` - this initiates a balance transfer from one account to another. The expected format is `{"sourceAccountNumber":"<sourceAccountNumber>","destinationAccountNumber":"<destinationAccountNumber>","amount":<amount>}` This returns a location header to indicate how to access the newly enacted transaction
 
 ### Examples
-* Create an account
-    `curl -H "Content-Type: application/json" --data '{ "accountNumber":"myNewAccount", "openingBalance": 10.11 }' localhost:8080/accounts -v'`
-* Initiate a transfer
-    `curl -H "Content-Type: application/json" --data '{ "sourceAccountNumber":"myNewAccount","destinationAccountNumber":"anotherAccount", "amount":5 }' localhost:8080/transfer -v
+* Create an account:  
 
+    `curl -H "Content-Type: application/json" --data '{ "accountNumber":"myNewAccount", "openingBalance": 10.11 }' localhost:8080/accounts -v'`
+    
+* Initiate a transfer: 
+
+    `curl -H "Content-Type: application/json" --data '{ "sourceAccountNumber":"myNewAccount","destinationAccountNumber":"anotherAccount", "amount":5 }' localhost:8080/transfer -v`
+    
 ### Notes
 * Syntactical errors in requests will return a **400** response and a JSON object containing vailidation errors.
 * If the API is unable to comply with a syntactically correct request, it will return a **422** error and an associated error message.
