@@ -40,6 +40,7 @@
 * If the API is unable to comply with a syntactically correct request, it will return a **422** error and an associated error message.
 * Currency values are **rounded down** to two decimal places - i.e. specifying a value of **123.456** will be understood as **123.45**
 * There is no explicitly defined currency - it's assumed to be a generic currency with two decimal places
+* Running the application the **test-data** spring application profile will load some dummy data on application startup
 
 ### Going Further
 Some suggestions for improvements include
