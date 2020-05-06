@@ -20,12 +20,11 @@
 
 `GET /accounts/<accountNumber>` - returns the account with the given accountNumber
 
-`GET /transactions` - provides a paged list of transactions. This supports optional paging and sorting parameters [as detailed here](https://docs.spring.io/spring-data/rest/docs/2.0.0.M1/reference/html/paging-chapter.html)
+`GET /transactions` - provides a paged list of transactions. This supports optional paging and sorting parameters [as detailed here](https://docs.spring.io/spring-data/rest/docs/2.0.0.M1/reference/html/paging-chapter.html) 
 
-`GET /transactions/<id>` - returns the transaction with the given id
+`GET /transactions/<id>` - returns the transaction with the given id 
 
 `POST /transfer` - this initiates a balance transfer from one account to another. The expected format is `{"sourceAccountNumber":"<sourceAccountNumber>","destinationAccountNumber":"<destinationAccountNumber>","amount":<amount>}` This returns a location header to indicate how to access the newly enacted transaction
-------
 
 ### Examples
 * Create an account
