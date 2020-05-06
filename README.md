@@ -7,7 +7,7 @@
 * either run directly with maven by typing `mvn`
   or
   -  build the jar file with `mvn clean package` which will also run the tests and package the jar
-  -  run the jar file `java -jar target/transfer-api.jar`
+  -  run the jar file `java -jar target/transfer-api-0.0.1-SNAPSHOT.jar`
 * the app is an executable Spring Boot jar and will run by default on http://localhost:8080 but that is configurable in the usual way
 
 ## API
