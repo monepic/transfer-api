@@ -16,25 +16,26 @@
 #### Note: all endpoints are expecting the `Content-Type:application/json` header
 
 `GET /accounts`  - provides a paged list of accounts. This supports optional paging and sorting parameters [as detailed here](https://docs.spring.io/spring-data/rest/docs/2.0.0.M1/reference/html/paging-chapter.html)
+
 `POST /accounts` - creates a new account with inital balance. The expected format is `{"accountNumber":"<accountNumber>","openingBalance":<openingBalance>}` This sets a location header to indicate how to access the newly created account.
 
 `GET /accounts/<accountNumber>` - returns the account with the given accountNumber
 
-`GET /transactions` - provides a paged list of transactions. This supports optional paging and sorting parameters [as detailed here](https://docs.spring.io/spring-data/rest/docs/2.0.0.M1/reference/html/paging-chapter.html) 
+`GET /transactions` - provides a paged list of transactions. This supports optional paging and sorting parameters [as detailed here](https://docs.spring.io/spring-data/rest/docs/2.0.0.M1/reference/html/paging-chapter.html)
 
-`GET /transactions/<id>` - returns the transaction with the given id 
+`GET /transactions/<id>` - returns the transaction with the given id
 
 `POST /transfer` - this initiates a balance transfer from one account to another. The expected format is `{"sourceAccountNumber":"<sourceAccountNumber>","destinationAccountNumber":"<destinationAccountNumber>","amount":<amount>}` This returns a location header to indicate how to access the newly enacted transaction
 
 ### Examples
-* Create an account:  
+* Create an account: 
 
     `curl -H "Content-Type: application/json" --data '{ "accountNumber":"myNewAccount", "openingBalance": 10.11 }' localhost:8080/accounts -v` 
-    
+
 * Initiate a transfer: 
 
-    `curl -H "Content-Type: application/json" --data '{ "sourceAccountNumber":"myNewAccount","destinationAccountNumber":"anotherAccount", "amount":5 }' localhost:8080/transfer -v`
-    
+    `curl -H "Content-Type: application/json" --data '{ "sourceAccountNumber":"myNewAccount","destinationAccountNumber":"anotherAccount", "amount":5 }' localhost:8080/transfer -v` 
+
 ### Notes
 * Syntactical errors in requests will return a **400** response and a JSON object containing vailidation errors.
 * If the API is unable to comply with a syntactically correct request, it will return a **422** error and an associated error message.

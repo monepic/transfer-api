@@ -36,7 +36,6 @@ public @interface SourceAndDestAreDifferent {
 
         @Override
         public boolean isValid(TransferRequest value, ConstraintValidatorContext context) {
-            System.out.println("vvvvv");
             return value.getSourceAccountNumber() == null 
                     || value.getDestinationAccountNumber() == null
                     || ! value.getSourceAccountNumber().equals(value.getDestinationAccountNumber());

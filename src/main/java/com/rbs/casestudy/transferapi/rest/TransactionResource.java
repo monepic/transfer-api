@@ -44,7 +44,6 @@ public class TransactionResource {
         return ResponseEntity.of(transactionService.getTransaction(id));
     }
 
-    @Transactional
     @PostMapping("/transfer")
     public ResponseEntity<?> transfer(@RequestBody @Valid TransferRequest transferRequest, UriComponentsBuilder b) {
 
